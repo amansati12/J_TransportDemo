@@ -1,0 +1,40 @@
+title: RapidRoute Transport
+tagline: Reliable Transport, Logistics and Goods Delivery
+description: Professional transport service, logistics company, truck booking, goods carrier and cargo delivery support for local and intercity business transport.
+url: ""
+baseurl: ""
+locale: en_US
+timezone: Asia/Kolkata
+author:
+  name: RapidRoute Transport
+  phone: "+91 98765 43210"
+  email: info@rapidroute.example
+  address: "Transport Nagar, New Delhi, India"
+  whatsapp: "919876543210"
+
+permalink: /blog/:title/
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/images/hero-transport.svg
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      category: Transport Tips
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - work
+  - outputs

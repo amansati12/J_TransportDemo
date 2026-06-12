@@ -1,0 +1,153 @@
+---
+layout: default
+title: Transport Service, Logistics Company and Truck Booking
+description: RapidRoute Transport provides reliable local transport, intercity goods transport, truck booking, cargo service, parcel delivery, full truck load and part load transport.
+image: /assets/images/hero-transport.svg
+---
+
+<section class="hero-section" style="background-image: linear-gradient(90deg, rgba(10,31,68,.92), rgba(10,31,68,.62)), url('{{ "/assets/images/hero-transport.svg" | relative_url }}');">
+  <!-- Replace assets/images/hero-transport.svg with your real truck or logistics hero image when ready. -->
+  <div class="container">
+    <div class="row align-items-center min-vh-100 pt-5">
+      <div class="col-lg-8" data-reveal>
+        <p class="eyebrow text-warning">Trusted transport service for business cargo</p>
+        <h1 class="display-3 fw-bold text-white">Fast, safe and affordable goods transport across major routes.</h1>
+        <p class="lead text-white-80 mt-4">RapidRoute Transport is a professional logistics company for local transport, intercity transport, truck booking, parcel delivery, commercial goods delivery, full truck load and part load transport.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn btn-warning btn-lg" href="{{ '/pricing/' | relative_url }}">Book Transport Now</a>
+          <a class="btn btn-outline-light btn-lg" href="{{ '/contact/' | relative_url }}">Request Free Quote</a>
+        </div>
+        <div class="trust-row mt-5">
+          <span>On-Time Delivery</span>
+          <span>GPS Tracking</span>
+          <span>24/7 Support</span>
+          <span>Insured Movement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <div class="section-heading text-center" data-reveal>
+      <p class="eyebrow text-orange">What we move</p>
+      <h2>Complete transport and logistics services</h2>
+      <p>From urgent parcel delivery to industrial goods transport, our route planning, experienced drivers and reliable fleet help keep your supply chain moving.</p>
+    </div>
+    <div class="row g-4">
+      {% assign services = "Local transport service|Quick city movement for retailers, wholesalers and office supply teams.;Intercity goods transport|Planned cargo movement across state and regional business routes.;Truck booking service|Book the right truck size for single shipments or recurring loads.;Commercial goods delivery|Reliable goods carrier support for manufacturers, dealers and distributors.;Parcel and cargo service|Safe handling for small cargo, cartons, packages and business parcels.;Full truck load service|Dedicated vehicle movement for high-volume cargo and sensitive shipments." | split: ";" %}
+      {% for item in services %}
+        {% assign service = item | split: "|" %}
+        <div class="col-md-6 col-lg-4" data-reveal>
+          <article class="service-card h-100">
+            <div class="icon-badge">{{ forloop.index }}</div>
+            <h3>{{ service[0] }}</h3>
+            <p>{{ service[1] }}</p>
+            <a href="{{ '/services/' | relative_url }}">Explore service</a>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-reveal>
+        <img class="img-fluid rounded-4 shadow-lg" src="{{ '/assets/images/logistics-warehouse.svg' | relative_url }}" alt="Warehouse team loading cargo for logistics delivery">
+        <!-- Replace assets/images/logistics-warehouse.svg with your real warehouse or cargo loading image. -->
+      </div>
+      <div class="col-lg-6" data-reveal>
+        <p class="eyebrow text-orange">Why choose us</p>
+        <h2>Built for safe delivery, steady communication and predictable timing.</h2>
+        <p>Every shipment is handled with route checks, driver assignment, loading support and active updates. Our transport coordinators help businesses reduce delays, control logistics costs and protect customer commitments.</p>
+        <div class="row g-3 mt-3">
+          {% assign badges = "Experienced drivers;Reliable fleet;Affordable pricing;Damage-aware handling;Same-day options;Business logistics support" | split: ";" %}
+          {% for badge in badges %}
+            <div class="col-sm-6"><div class="feature-pill">{{ badge }}</div></div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-navy text-white">
+  <div class="container">
+    <div class="section-heading text-center" data-reveal>
+      <p class="eyebrow text-warning">Fleet options</p>
+      <h2>Choose the right truck for every load</h2>
+      <p class="text-white-70">Mini trucks, pickup vehicles, container trucks and heavy goods carriers are assigned based on volume, distance, urgency and cargo type.</p>
+    </div>
+    <div class="row g-4">
+      {% assign fleet = "Mini Truck|750 kg to 1.5 ton|Local transport and parcel delivery;Open Body Truck|3 ton to 9 ton|Industrial goods and construction material;Container Truck|14 ft to 32 ft|Secure commercial goods delivery" | split: ";" %}
+      {% for item in fleet %}
+        {% assign truck = item | split: "|" %}
+        <div class="col-md-4" data-reveal>
+          <article class="fleet-card">
+            <img src="{{ '/assets/images/truck-fleet.svg' | relative_url }}" alt="{{ truck[0] }} for truck transport">
+            <h3>{{ truck[0] }}</h3>
+            <p class="text-warning fw-semibold">{{ truck[1] }}</p>
+            <p>{{ truck[2] }}</p>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6" data-reveal>
+        <p class="eyebrow text-orange">Request a quote</p>
+        <h2>Get a practical transport estimate before you book.</h2>
+        <p>Share pickup, destination, cargo type and required vehicle size. Our team will suggest the best transport service, route plan and truck booking option.</p>
+        <div class="route-cloud mt-4">
+          {% assign cities = "Delhi NCR,Mumbai,Pune,Jaipur,Ahmedabad,Bengaluru,Hyderabad,Chennai,Kolkata,Lucknow" | split: "," %}
+          {% for city in cities %}<span>{{ city }}</span>{% endfor %}
+        </div>
+      </div>
+      <div class="col-lg-6" data-reveal>
+        <form class="quote-form needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6"><input class="form-control" type="text" placeholder="Your name" required></div>
+            <div class="col-md-6"><input class="form-control" type="tel" placeholder="Phone number" required></div>
+            <div class="col-md-6"><input class="form-control" type="text" placeholder="Pickup city" required></div>
+            <div class="col-md-6"><input class="form-control" type="text" placeholder="Delivery city" required></div>
+            <div class="col-12"><textarea class="form-control" rows="4" placeholder="Cargo details, weight and vehicle preference" required></textarea></div>
+            <div class="col-12"><button class="btn btn-warning btn-lg w-100" type="submit">Request Free Quote</button></div>
+          </div>
+          <p class="form-status mt-3 mb-0" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading text-center" data-reveal>
+      <p class="eyebrow text-orange">Customer feedback</p>
+      <h2>Trusted by businesses that cannot afford delivery delays</h2>
+    </div>
+    <div id="testimonialCarousel" class="carousel slide testimonial-slider" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        {% assign quotes = "RapidRoute helped us move urgent cartons from Delhi to Jaipur on a same-day schedule. Communication was clear from pickup to delivery.|Amit Sharma, Wholesale Distributor;Their truck booking team understands commercial goods delivery. We get practical pricing and dependable drivers.|Priya Mehta, Manufacturing Manager;We use them for part load transport every week. The cargo reaches safely and the support team is always reachable.|Rohit Verma, Retail Operations" | split: ";" %}
+        {% for item in quotes %}
+          {% assign quote = item | split: "|" %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <blockquote>
+              <p>"{{ quote[0] }}"</p>
+              <cite>{{ quote[1] }}</cite>
+            </blockquote>
+          </div>
+        {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Previous testimonial"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next testimonial"><span class="carousel-control-next-icon"></span></button>
+    </div>
+  </div>
+</section>

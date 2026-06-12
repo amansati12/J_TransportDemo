@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Highway transport placeholder</title>
+  <desc id="desc">Placeholder image showing a truck route on a highway.</desc>
+  <rect width="900" height="560" fill="#0a1f44"/>
+  <circle cx="720" cy="110" r="70" fill="#ffc107"/>
+  <path d="M0 360 C170 300 340 300 500 360 S760 430 900 360 V560 H0Z" fill="#172033"/>
+  <path d="M210 560 L450 255 L690 560Z" fill="#263349"/>
+  <path d="M450 272 L450 560" stroke="#ffc107" stroke-width="10" stroke-dasharray="38 38"/>
+  <g transform="translate(245 310)">
+    <rect x="145" y="35" width="230" height="88" rx="10" fill="#ffffff"/>
+    <rect x="45" y="68" width="120" height="55" rx="9" fill="#f97316"/>
+    <rect x="74" y="80" width="38" height="26" rx="4" fill="#0a1f44"/>
+    <circle cx="105" cy="135" r="25" fill="#111827"/>
+    <circle cx="315" cy="135" r="25" fill="#111827"/>
+  </g>
+</svg>

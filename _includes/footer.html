@@ -1,0 +1,57 @@
+<footer class="footer bg-navy text-white">
+  <section class="footer-cta">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="eyebrow text-warning mb-2">Need a dependable goods carrier today?</p>
+          <h2 class="h1 mb-0">Book safe, on-time truck transport for your next shipment.</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-warning btn-lg me-2" href="{{ '/pricing/' | relative_url }}">Request Free Quote</a>
+          <a class="btn btn-outline-light btn-lg" href="tel:{{ site.author.phone | remove: ' ' }}">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h2 class="h4">{{ site.title }}</h2>
+        <p class="text-white-70">A professional logistics company for local transport, intercity transport, truck booking, parcel delivery, cargo service and commercial goods delivery.</p>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <h3 class="h6 text-warning">Company</h3>
+        <ul class="list-unstyled footer-links">
+          <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
+          <li><a href="{{ '/fleet/' | relative_url }}">Fleet</a></li>
+          <li><a href="{{ '/routes/' | relative_url }}">Routes</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <h3 class="h6 text-warning">Services</h3>
+        <ul class="list-unstyled footer-links">
+          <li><a href="{{ '/services/' | relative_url }}">Full truck load</a></li>
+          <li><a href="{{ '/services/' | relative_url }}">Part load transport</a></li>
+          <li><a href="{{ '/services/' | relative_url }}">Door-to-door delivery</a></li>
+          <li><a href="{{ '/services/' | relative_url }}">Express cargo service</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="h6 text-warning">Contact</h3>
+        <p class="mb-1">{{ site.author.address }}</p>
+        <p class="mb-1"><a href="tel:{{ site.author.phone | remove: ' ' }}">{{ site.author.phone }}</a></p>
+        <p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+      </div>
+    </div>
+    <hr class="border-light opacity-25">
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small text-white-70">
+      <p class="mb-0">&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      <p class="mb-0">Built with Jekyll, HTML5, Bootstrap 5, CSS3, JavaScript and Liquid.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="floating-whatsapp" href="https://wa.me/{{ site.author.whatsapp }}?text=Hello%20RapidRoute%20Transport%2C%20I%20need%20a%20transport%20quote" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WA</a>
+<a class="floating-call" href="tel:{{ site.author.phone | remove: ' ' }}" aria-label="Call transport office">Call</a>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>

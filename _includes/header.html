@@ -1,0 +1,28 @@
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+        <span class="brand-mark">RR</span>
+        <span>
+          <strong>{{ site.title }}</strong>
+          <small>{{ site.tagline }}</small>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryMenu" aria-controls="primaryMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="primaryMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          {% assign nav_items = "Home:/,About:/about/,Services:/services/,Fleet:/fleet/,Routes:/routes/,Pricing:/pricing/,Gallery:/gallery/,Testimonials:/testimonials/,Blog:/blog/,Contact:/contact/" | split: "," %}
+          {% for item in nav_items %}
+            {% assign pair = item | split: ":" %}
+            <li class="nav-item">
+              <a class="nav-link {% if page.url == pair[1] %}active{% endif %}" href="{{ pair[1] | relative_url }}">{{ pair[0] }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <a class="btn btn-warning ms-lg-3 fw-semibold" href="{{ '/pricing/' | relative_url }}">Request Quote</a>
+      </div>
+    </div>
+  </nav>
+</header>

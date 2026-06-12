@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Cargo loading placeholder</title>
+  <desc id="desc">Placeholder image showing cargo boxes being loaded for delivery.</desc>
+  <rect width="900" height="560" fill="#12325f"/>
+  <rect y="382" width="900" height="178" fill="#111827"/>
+  <rect x="510" y="145" width="260" height="180" rx="12" fill="#f5f7fb"/>
+  <rect x="365" y="205" width="165" height="120" rx="12" fill="#f97316"/>
+  <rect x="565" y="185" width="150" height="85" rx="8" fill="#d9e3f0"/>
+  <circle cx="445" cy="350" r="42" fill="#0b1220"/>
+  <circle cx="675" cy="350" r="42" fill="#0b1220"/>
+  <g fill="#ffc107">
+    <rect x="150" y="310" width="95" height="75" rx="8"/>
+    <rect x="255" y="270" width="95" height="115" rx="8"/>
+    <rect x="110" y="230" width="95" height="75" rx="8"/>
+  </g>
+  <path d="M210 385 L395 325" stroke="#ffc107" stroke-width="12"/>
+</svg>

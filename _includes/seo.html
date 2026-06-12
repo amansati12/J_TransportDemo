@@ -1,0 +1,38 @@
+<title>{{ page.title | default: site.title }}{% unless page.title == site.title %} | {{ site.title }}{% endunless %}</title>
+<meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta property="og:type" content="{% if page.collection == 'posts' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+<meta property="og:description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ page.image | default: '/assets/images/hero-transport.svg' | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
+<meta name="twitter:description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
+<meta name="twitter:image" content="{{ page.image | default: '/assets/images/hero-transport.svg' | absolute_url }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "MovingCompany", "TransportationService"],
+  "name": "{{ site.title }}",
+  "description": "{{ site.description | escape }}",
+  "url": "{{ site.url | append: site.baseurl | default: '/' }}",
+  "telephone": "{{ site.author.phone }}",
+  "email": "{{ site.author.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Transport Nagar",
+    "addressLocality": "New Delhi",
+    "addressCountry": "IN"
+  },
+  "areaServed": ["Delhi NCR", "Mumbai", "Pune", "Jaipur", "Ahmedabad", "Bengaluru", "Hyderabad", "Chennai", "Kolkata"],
+  "serviceType": ["transport service", "truck transport", "goods carrier", "cargo service", "parcel delivery", "truck booking", "full truck load", "part load transport"],
+  "openingHours": "Mo-Su 00:00-23:59",
+  "priceRange": "$$",
+  "image": "{{ '/assets/images/hero-transport.svg' | absolute_url }}"
+}
+</script>

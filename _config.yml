@@ -1,8 +1,8 @@
 title: RapidRoute Transport
 tagline: Reliable Transport, Logistics and Goods Delivery
 description: Professional transport service, logistics company, truck booking, goods carrier and cargo delivery support for local and intercity business transport.
-url: ""
-baseurl: ""
+url: "https://amansati12.github.io"
+baseurl: "/J_TransportDemo"
 locale: en_US
 timezone: Asia/Kolkata
 author:
